@@ -28,7 +28,6 @@ spec:
     spec:
       containers:
       - name: flask-change
-        image: flask-change:latest
-        imagePullPolicy: Never
+        image: acrjavaeastus.azurecr.io/acrpythoneastus:python78
         ports:
         - containerPort: 8080
