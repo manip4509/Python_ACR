@@ -1,6 +1,6 @@
 on: workflow_dispatch
 
-name: Java_containerapp_deployment
+name: Test_containerapp_deployment
 
 jobs:
   build:
