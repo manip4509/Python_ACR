@@ -23,8 +23,8 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     
     - run: |
-        docker build . -t acrsampleregistry.azurecr.io/pythoncontainerapp:${{ github.sha }}
-        docker push acrsampleregistry.azurecr.io/pythoncontainerapp:${{ github.sha }} 
+        docker build . -t acrsampleregistry.azurecr.io/python123containerapp:${{ github.sha }}
+        docker push acrsampleregistry.azurecr.io/python123containerapp:${{ github.sha }} 
   deploy:
       runs-on: ubuntu-latest
       needs: build
@@ -47,7 +47,7 @@ jobs:
                 --name pythonjavaapp \
                 --resource-group cicd_templates \
                 --environment container-env \
-                --image acrsampleregistry.azurecr.io/pythoncontainerapp:${{ github.sha }} \
+                --image acrsampleregistry.azurecr.io/python123containerapp:${{ github.sha }} \
                 --registry-server acrsampleregistry.azurecr.io \
                 --registry-username ${{ secrets.REGISTRY_USERNAME }} \
                 --registry-password ${{ secrets.REGISTRY_PASSWORD }}\
